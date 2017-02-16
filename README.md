@@ -2,7 +2,9 @@
 
 To run the project:
 
-1. Clone into local directory
+1. Clone into local directory. 
+- git clone --depth 1 https://github.com/drichardonline/av-programming-exercise <local_dir_name>
+- cd <local_dir_name>
 2. npm install
 3. npm start
 
