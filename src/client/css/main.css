@@ -1,0 +1,108 @@
+/* ---------------------------------------------------------------------------------------------*/
+
+/* COMPONENT STYLES */
+/* 
+Component-specific styles are co-located in each component's folder.
+Header
+Sidenav
+Footer
+etc.
+*/
+
+
+
+/* ---------------------------------------------------------------------------------------------*/
+
+/* MAIN ROOT APP STYLES */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+}
+
+/* Main content area rendered hosted within the app roots router-outlet. */
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------*/
+
+/* THEMING STYLES */
+
+/*
+Since only small color changes are made in themes, all theming for all components are kept 
+in this one location for simplicity.
+
+In a production app, we can choose the architecture differently. For example, some other ways are:
+
+1. Keep the them styles also in each component's css file.
+2. Collect all theme styles in a separate theme-<color>.css file for each theme. And combine them 
+to single minified packages only in prod.
+etc.
+
+Depending on the complexity of what we intend to achieve and how we structure the rest of the 
+app, we will make these architectural choices.
+
+In this demo exercise app, I am keeping it simple just for the sake of demonstrating that the app
+is "themeable" with a button that switches colors of main areas at runtime.
+*/
+
+
+/* THEME 0 - DEFAULT */
+/* Not a lot is needed for default. The original styling is enough for most default theme colors.  */
+
+
+.nav-sidebar li a.active,
+.nav-sidebar li a.active:hover,
+.nav-sidebar li a.active:focus {
+  background-color: #777;
+  color: #fff;
+  
+}
+
+
+/* THEME 1 - BLUE */
+.theme-blue .navbar,
+.theme-blue .navbar-inverse,
+.theme-blue .footer {
+  background-color: #01579b;
+  background-image: none;
+}
+.theme-blue .navbar-header a.navbar-brand,
+.theme-blue .footer p {
+  color: #fff;
+}
+.theme-blue .nav-sidebar,
+.theme-blue .sidebar {
+  background-color: #EBF5FB;
+  border-right: 1px solid #EBF5FB;
+}
+.theme-blue .nav-sidebar a {
+  background-color: #EBF5FB;
+  color: #01579b;
+}
+.theme-blue .nav-sidebar li a:hover,
+.theme-blue .nav-sidebar li a:focus {
+  background-color: #80d8ff;
+}
+.theme-blue .nav-sidebar li a.active,
+.theme-blue .nav-sidebar li a.active:hover,
+.theme-blue .nav-sidebar li a.active:focus {
+  background: #01579b;
+  color: #fff;
+}
+
+
+/* THEME 2 - BROWN */
+/* Not implemented. Placeholder only. */

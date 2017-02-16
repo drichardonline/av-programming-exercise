@@ -1,0 +1,43 @@
+<!--
+Note:
+
+The app is split into 3 main components under the root:
+1. Header
+2. Sidenav
+3. Footer
+
+The main body area is loaded into the router outlet. This hosts components like
+a. Login page
+b. Geolocation page
+c. About page
+etc.
+
+All the components that are created by the app are prefixed with "av-" in order to differentiate 
+them from normal html tags and components coming from angular itself.
+
+Example: <av-footer> is the app's component vs <footer> which can be a regular html element tag.
+
+-->
+
+<!--
+This span tag is merely a shortcut to demonstrate theming by applying attaching a parent 
+css class specifying the theme. Then, all elements under this theme class can be targeted 
+semantically and styled for the theme. This is a simplistic implementation just for demostrating
+what's possible. A production app should have a more robust implementation.
+-->
+<span [ngClass]="{'theme-blue': isThemeBlue(), 'theme-brown': isThemeBrown() }">
+
+<av-header></av-header><!-- Header component -->
+
+<div class="container-fluid">
+  <div class="row">
+    <av-sidenav></av-sidenav><!-- Sidenav component -->
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <router-outlet></router-outlet><!-- Main content area goes into router outlet -->
+    </div>
+  </div>
+</div>
+
+<av-footer></av-footer><!-- Footer component -->
+
+</span>

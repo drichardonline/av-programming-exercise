@@ -1,0 +1,13 @@
+/* Footer area positioned always at bottom of screen. */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #f5f5f5;
+  background-color: #222;
+}
+.footer p {
+  text-align: center;
+  line-height: 40px;
+}

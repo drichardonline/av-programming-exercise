@@ -1,0 +1,17 @@
+/* Top navigation. Hide default border to remove 1px line. */
+.navbar-fixed-top {
+  border: 0;
+  height: 50px; /* drichard */
+}
+
+/* Top navbar-right area with switch theme button. */
+/* Hide for mobile form factor. Display only for larger screen widths. */
+.navbar-right {
+  display: none;
+}
+@media (min-width: 768px) {
+  .navbar-right {
+    display: block;
+    padding-right: 15px;
+  }
+}

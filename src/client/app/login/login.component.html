@@ -1,0 +1,6 @@
+<h1 class="page-header">Welcome!</h1>
+<p>Sign in with your Facebook credentials to use the app and view the geolocation view. If you navigate to the geolocation page directly without signing in, you will be redirected here for login.</p>
+<br>
+<br>
+<div *ngIf="!isLoggedIn()" ><button (click)="login()" class="btn btn-lg btn-success" href="#">Sign in with Facebook</button></div>
+<div *ngIf="isLoggedIn()" ><button (click)="logout()" class="btn btn-lg btn-danger">Sign out</button></div>
