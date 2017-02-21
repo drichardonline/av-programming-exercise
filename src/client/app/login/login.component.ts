@@ -36,15 +36,10 @@ export class LoginComponent {
       (response:boolean) => {
         if (!this.authService.isLoggedIn) {
           console.log('Login Flow > isLoggedIn? ' + response);
-          component.router.navigate(['/about']);
+          component.router.navigate(['/login']);
         }
       }
     );
-  }
-
-
-  isLoggedIn(): boolean {
-    return this.authService.isLoggedIn;
   }
 
 }
